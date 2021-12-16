@@ -67,6 +67,8 @@ def minyak_tahun():
                         tahunnol.append(data0.index.values[x])
                     tahunnol = str(tahunnol)[1:-1]
                     st.write(f'Produksi sama dengan nol pada tahun: {tahunnol}')
+                kumulatif = data_raw['produksi'].sum()
+                st.write(f'Jumlah produksi kumulatif: {kumulatif:.2f}')
                 median = data_raw['produksi'].median()
                 rata = data_raw['produksi'].mean()
                 lower_q = np.percentile(data_raw['produksi'], 25)
