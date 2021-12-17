@@ -3,7 +3,7 @@ import soala as a
 import soalb as b
 import soalc as c
 
-opsi = st.sidebar.selectbox("Fitur Aplikasi", ("Produksi Minyak Mentah Tahunan", "Produksi Terbesar pada Tahun Tertentu", "Produksi Minyak Mentah Kumulatif", "Informasi Negara"))
+opsi = st.sidebar.selectbox("Fitur Aplikasi", ("Produksi Minyak Mentah Tahunan Negara", "Produksi Minyak Mentah Terbesar pada Tahun Tertentu", "Produksi Minyak Mentah Kumulatif Terbesar", "Informasi Negara Tertentu serta Data Produksi Minyak Mentah"))
 
 if opsi == "Produksi Minyak Mentah Tahunan Negara":
     a.minyak()
