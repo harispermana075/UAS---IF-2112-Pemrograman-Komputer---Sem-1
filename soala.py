@@ -20,13 +20,13 @@ def ambil_data(kode):
     data_negara.set_index("tahun", inplace=True)
     return data_negara
 
-def minyak_tahun():
+def info_negara():
     file_json = open('kode_negara_lengkap.json')
     file_json = json.loads(file_json.read())
     list_negara = list()
     for x in range(len(file_json)):
         list_negara.append(file_json[x]['name'])
-    st.title('Informasi Negara')   
+    st.title('Informasi Negara Tertentu serta Data Produksi Minyak Mentah')   
     nama_negara = st.selectbox('Negara', list_negara)
     try:
         no_country = search_data(nama_negara)
@@ -84,7 +84,7 @@ def minyak():
     list_negara = list()
     for x in range(len(file_json)):
         list_negara.append(file_json[x]['name'])
-    st.title('Produksi Minyak Negara dalam Tahun')   
+    st.title('Produksi Minyak Mentah Tahunan Negara')   
     nama_negara = st.selectbox('Negara', list_negara)
     try:
         no_country = search_data(nama_negara)

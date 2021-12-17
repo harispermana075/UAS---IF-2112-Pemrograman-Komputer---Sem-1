@@ -15,6 +15,7 @@ def sum_data(b):
     return data_negara
 
 def kumulatif():
+    st.title("Produksi Minyak Kumulatif Terbesar")
     besar = st.number_input("Masukkan banyak negara yang akan ditampilkan", value=5, step=1)
     if besar <= 0:
         st.write("Masukkan angka diatas 0")
@@ -24,5 +25,4 @@ def kumulatif():
         if besar < 17:
             plt.xticks(rotation=0)
         plt.xlabel("Kode Negara")
-        st.subheader("Jumlah Produksi Terbesar Secara Kumulatif Keseluruhan Tahun")
         st.pyplot(plt)

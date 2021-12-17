@@ -14,7 +14,7 @@ def ambil_data(tahun, b):
     return data_negara
 
 def terbesar():
-    st.title("Jumlah Produksi Minyak Mentah Terbesar dalam Satu Tahun")
+    st.title("Produksi Minyak Mentah Terbesar pada Tahun Tertentu")
     tahun = st.number_input("Tahun Produksi (1971-2015)", min_value=1971, max_value=2015, step=1)
     besar = st.number_input("Banyak negara yang ditampilkan", value=5, step=1)
     if tahun == '' or besar == '':
