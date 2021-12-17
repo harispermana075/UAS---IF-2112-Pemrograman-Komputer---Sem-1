@@ -1,15 +1,18 @@
 import streamlit as st
+from PIL import Image
 import soala as a
 import soalb as b
 import soalc as c
 
-opsi = st.sidebar.selectbox("Fitur Aplikasi", ("Produksi Minyak Mentah Tahunan Negara", "Produksi Minyak Mentah Terbesar pada Tahun Tertentu", "Produksi Minyak Mentah Kumulatif Terbesar", "Informasi Negara Tertentu serta Data Produksi Minyak Mentah"))
+gambar = Image.open('logo.png')
+st.sidebar.image(gambar)
+opsi = st.sidebar.selectbox("Fitur Aplikasi", ("Produksi Minyak Mentah Tahunan", "Produksi Terbesar pada Tahun Tertentu", "Produksi Minyak Mentah Kumulatif", "Informasi Negara"))
 
-if opsi == "Produksi Minyak Mentah Tahunan Negara":
+if opsi == "Produksi Minyak Mentah Tahunan":
     a.minyak()
-elif opsi == "Produksi Minyak Mentah Terbesar pada Tahun Tertentu":
+elif opsi == "Produksi Terbesar pada Tahun Tertentu":
     b.terbesar()
-elif opsi == "Produksi Minyak Mentah Kumulatif Terbesar":
+elif opsi == "Produksi Minyak Mentah Kumulatif":
     c.kumulatif()
-elif opsi == "Informasi Negara Tertentu serta Data Produksi Minyak Mentah":
+elif opsi == "Informasi Negara":
     a.info_negara()
